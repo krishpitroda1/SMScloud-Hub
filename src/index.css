@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body{
+    /* background: conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60)); */
+    /* background: linear-gradient(rgb(56, 189, 248), rgb(186, 230, 253)); */
+      /* background: linear-gradient(to right, rgb(29, 78, 216), rgb(30, 64, 175), rgb(17, 24, 39)); */
+      /* background: linear-gradient(to right, rgb(147, 197, 253), rgb(187, 247, 208), rgb(253, 224, 71)); */
+    /* background: linear-gradient(to right, rgb(153, 246, 228), rgb(217, 249, 157)); */
+    /* background:  linear-gradient(to right, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));  */
+    /* background: linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0)); */
+    /* color:white;  */
+    /* background:linear-gradient(to right, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248)); */
+    /* background: linear-gradient(to right, rgb(254, 240, 138), rgb(187, 247, 208), rgb(34, 197, 94)); */
+    /* background: linear-gradient(to right, rgb(254, 202, 202), rgb(252, 165, 165), rgb(254, 240, 138)); */
+    /* background: linear-gradient(to right, rgb(254, 240, 138), rgb(251, 207, 232), rgb(244, 114, 182)); */
+    /* background-color: skyblue;  */
+    /* background: linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241));  */
+    /* color:black; */
+    /* background: linear-gradient(to right top, rgb(15, 118, 110), rgb(186, 230, 253), rgb(185, 28, 28)); */
+    /* background-image: url("C:/Users/krish/Downloads/Hypercolor Gradient (2).jpeg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-size: 100% 100%; */
+      background-color: skyblue;
+      overflow-x: hidden; 
+      /* font-family: sans-serif; */
+      /* font-family: 'Exo 2', sans-serif; */
+      /* font-family: 'Playpen Sans', cursive; */
+      /* font-family: 'Roboto', sans-serif; */
+      /* font-family: 'Rubik Burned', system-ui; */
+      /* font-family: 'Poppins', sans-serif; */
+      /* font-family: 'Climate Crisis', sans-serif; */
+      /* font-family: 'Inter', sans-serif;*/
+        /* font-family: 'Merriweather', serif; */
+        /* font-family: 'Montserrat', sans-serif; */
+        /* font-family: 'Noto Sans', sans-serif; */
+        /* font-family: 'Open Sans', sans-serif; */
+        /* font-family: 'Playfair Display', serif; */
+        /* font-family: 'Playpen Sans', cursive; */
+        /* font-family: 'Raleway', sans-serif; */
+        /* font-family: 'Roboto Slab', serif; */
+        /* font-family: 'Rubik Burned', system-ui; */
+        /* font-family: 'Source Code Pro', monospace;  */
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  canvas {
+    display: block;
+    cursor: crosshair;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.dropdown-link:hover .dropdown-icon {
+    rotate: 180deg;
+    
+}
+.dropdown-link:hover .dropdown, .dropdown:hover {
+  display: block;
+  top: 150%;
+}
+.dropdown {
+  width: max-content;
+}
+.logo {
+  max-width: 150px; /* Adjust as needed */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+li {
+  cursor: pointer;
+  padding: 5px;
+}
+ .horizontalLine::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: black;
+  width: 1px;
+  left: 100%;
+} 
+
+.sidedropdown-link:hover + .sidedropdown, .sidedropdown:hover{
+  display:block;
+}
+.sidedropdowntrigger a {
+  width: max-content;
+}
+.sidedropdown {
+  display: none;
+  top: 0;
+  left: 100%;
+}
+
+.dropdown-link:hover + .arrow{
+      rotate: 180deg;
+}
+/* .firstdiv{
+  background-image: url(assets/background2.jpeg);
+} */
+.swiper {
+  width: 100%;
+  height: 100%;
+  background-color:white;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background:whi  te;
+
+  /* Center slide text vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  margin-bottom: 50px;
+  margin-left:70px;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  object-fit: cover;
+}
+.swiper-client-msg{
+  padding: 5rem 8rem;
+  background: white;
+  border-radius: 1rem;
+  text-align: left;
+  box-shadow:black;
+  position: relative;
+}
+.swiper-slide img{
+  max-width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border:0.5rem solid white;
+}
+.swiper-client-msg::before{
+  position: absolute;
+  bottom: -10rem;
+  left:50%;
+  transform:translateX(-50%);
+  border:5rem solid white;
+  border-color: transparent;
+  border-top-color: #f3f4ff;
+}
+.swiper-client-data{
+  align-items: center;
+  margin-top: 3.2rem;
+}
+.swiper-client-msg  p::before{
+  position: absolute;
+  bottom:0;
+  right: 3rem;
+  left:2rem;
+  font-size:5rem ;
+  color:#ced3ff;
+ }
