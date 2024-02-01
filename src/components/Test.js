@@ -6,12 +6,68 @@ import Logo from '../assets/background2.jpeg'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { BiSolidQuoteSingleLeft } from "react-icons/bi"
 import { RiDoubleQuotesL ,RiDoubleQuotesR} from "react-icons/ri"
 export default function App() {
+  const data=[
+    {
+      name:'abc',
+      img:'https://media.licdn.com/dms/image/D4D03AQFm0iO0GGhXbA/profile-displayphoto-shrink_800_800/0/1689083752439?e=1712188800&v=beta&t=ajLcqon4GmavLbNk-0ZmPcjeh1DeutV1zUYaaqFGv4w',
+      review:"SMSCloud Hub provides one of if not the best school platform that we ever saw being provided with 24/7 support in the Mozambican Market allowing our growth in the school software segment"
+       },
+       {
+        name:'abc',
+        img:'https://media.licdn.com/dms/image/D4D03AQFm0iO0GGhXbA/profile-displayphoto-shrink_800_800/0/1689083752439?e=1712188800&v=beta&t=ajLcqon4GmavLbNk-0ZmPcjeh1DeutV1zUYaaqFGv4w',
+        review:"SMSCloud Hub provides one of if not the best school platform that we ever saw being provided with 24/7 support in the Mozambican Market allowing our growth in the school software segment"
+         },
+         {
+          name:'abc',
+          img:'https://media.licdn.com/dms/image/D4D03AQFm0iO0GGhXbA/profile-displayphoto-shrink_800_800/0/1689083752439?e=1712188800&v=beta&t=ajLcqon4GmavLbNk-0ZmPcjeh1DeutV1zUYaaqFGv4w',
+          review:"SMSCloud Hub provides one of if not the best school platform that we ever saw being provided with 24/7 support in the Mozambican Market allowing our growth in the school software segment"
+           }
+  ]
+  const settings = {
+    
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div >
        <h1 className="align-center text-sky-600  w-screen text-center p-5 font-serif font-bold text-3xl">
@@ -25,8 +81,9 @@ export default function App() {
           It's all about speed
         </h2>
         <p className="font-lg">
-          We provide you with a test account that can be set up in seconds. Our main focus is getting responses to you as soon as we can.
-        </p>
+        I am extremely satisfied with the high quality and satisfactory results provided by SMSCloud Hub. Their overall support has been exceptional, meeting all the requirements outlined in the Service Level Agreement (SLA). The team has consistently delivered excellent service, going above and beyond to ensure our needs are met. With their reliable platform and attentive support, we have experienced smooth operations and effective communication with our customers. I highly recommend SMSCloud Hub for their top-notch quality, remarkable results, and unwavering support.”
+
+</p>
       </div>
       <blockquote className="relative">
         <svg className="absolute top-0 start-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-gray-200 dark:text-gray-800" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -42,11 +99,11 @@ export default function App() {
         <footer className="mt-6">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description"/>
+              <img className="h-8 w-8 rounded-full" src="https://media.licdn.com/dms/image/C4D03AQFdLmS1UIimrg/profile-displayphoto-shrink_800_800/0/1657003885109?e=1712188800&v=beta&t=ZfmVEOXB1llx3jXGEtDP79JSL3T7IZ5CCULc49PlpZI" alt="Image Description"/>
             </div>
             <div className="grow ms-4 pt-5">
-              <div className="font-semibold text-gray-800 ">Josh Grazioso</div>
-              <div className="text-xs text-gray-500">Director  | airnab</div>
+              <div className="font-semibold text-gray-800 ">Abrar Tariq </div>
+              <div className="text-xs text-gray-500">Telintel</div>
             </div>
           </div>
         </footer>
@@ -105,97 +162,169 @@ export default function App() {
         Loved by business and individuals across the globe
       </h2>
     </div>
- 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div className="flex h-auto">
-        <div className="flex flex-col bg-white rounded-xl dark:bg-slate-900">
-          <div className="flex-auto p-4 md:p-6">
+      
+   <div className="m-5 p-5">
+      <Slider {...settings}>
+      <div className="flex p-3">
+        <div className="flex flex-col rounded-xl dark:bg-slate-900">
+          <div className="flex-auto h-64 p-4 md:p-6">
             <p className="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
-              " With Preline, we're able to easily track our performance in full detail. It's become an essential tool for us to grow and engage with our audience. "
-            </p>
+            "SMSCloud Hub provides one of if not the best school platform that we ever saw being provided with 24/7 support in the Mozambican Market allowing our growth in the school software segment"
+</p>
           </div>
 
           <div className="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-slate-700">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img className="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description"/>
+                <img className="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://media.licdn.com/dms/image/D4D03AQFCUjqGL2uj4Q/profile-displayphoto-shrink_800_800/0/1693931754329?e=1712188800&v=beta&t=CN07UEYcc9Ck_ay29gpWuEmmGW-Q9SNWvakv2UO921Y" alt="Image Description"/>
               </div>
 
               <div className="grow ms-3">
                 <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-200">
-                  Josh Tyson
-                </p>
+                Hugo Rebeiro  </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Product Manager | Capsule
+                Click Mobile
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex h-auto">
-        <div className="flex flex-col bg-white rounded-xl dark:bg-slate-900">
-          <div className="flex-auto p-4 md:p-6">
+      <div className="flex p-3">
+        <div className="flex flex-col h-full rounded-xl dark:bg-slate-900">
+          <div className="flex-auto h-64 p-4 md:p-6">
             <p className="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
-              " In September, I will be using this theme for 2 years. I went through multiple updates and changes and I'm very glad to see the consistency and effort made by the team. "
-            </p>
+            "We Tubelight Communication working with SMS Cloud Hub for a long time now, the routes, service and support have been constant and we see working with them successfully in the future as well "    </p>
           </div>
 
           <div className="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-slate-700">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img className="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description"/>
+                <img className="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://media.licdn.com/dms/image/D4D03AQFm0iO0GGhXbA/profile-displayphoto-shrink_800_800/0/1689083752439?e=1712188800&v=beta&t=ajLcqon4GmavLbNk-0ZmPcjeh1DeutV1zUYaaqFGv4w" alt="Image Description"/>
               </div>
 
               <div className="grow ms-3">
                 <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-200">
-                  Luisa
+                Praveen Singh
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Senior Director of Operations | Fitbit
+                Tubelight Communication 
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex h-auto">
-        <div className="flex flex-col bg-white rounded-xl dark:bg-slate-900">
-          <div className="flex-auto p-4 md:p-6">
+      <div className="flex p-3">
+        <div className="flex flex-col h-full rounded-xl dark:bg-slate-900">
+          <div className="flex-auto h-64 p-4 md:p-6">
             <p className="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
-              " Refreshing and Thought provoking design and it changes my view about how I design the websites. Great typography, modern clean white design, nice tones of the color. "
-            </p>
+          "We have been working with SMSCloud Hub since more than a year now and the cooperation with their Commercial Team has been extremely successful. They immediately understand our needs and provide in a short time the optimal solution to our requests both in terms of service quality and costs."
+
+  </p>
           </div>
 
           <div className="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-slate-700">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img className="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description"/>
+                <img className="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://media.licdn.com/dms/image/C4D03AQG06MMsmAA4DQ/profile-displayphoto-shrink_400_400/0/1657991464854?e=1712188800&v=beta&t=8plQ1IvFzcKv6aejyExIbKJFK82dRDDEQ2K5U1AfgSc" alt="Image Description"/>
               </div>
 
               <div className="grow ms-3">
                 <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-200">
-                  Alisa Williams
+                Antonio Catanzariti
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Entrepreneur | Happy customer
-                </p>
+                Imerald (FZE)
+                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="flex p-3">
+        <div className="flex flex-col rounded-xl dark:bg-slate-900">
+          <div className="flex-auto h-64 p-4 md:p-6">
+            <p className="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
+        "Choosing SMSCloud Hub as our aggregator was the best decision we made for our business. Their platform seamlessly connects us with multiple telecom operators, simplifying our messaging operations and enabling us to reach our customers more effectively."
+</p>
+          </div>
+
+          <div className="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-slate-700">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <img className="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="" alt="Image Description"/>
+              </div>
+
+              <div className="grow ms-3">
+                <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-200">
+                Erasmus Okrut 
+  </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                Intervas Limited 
+  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex p-3">
+        <div className="flex flex-col rounded-xl dark:bg-slate-900">
+          <div className="flex-auto h-64 p-4 md:p-6">
+            <p className="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
+            The five months we spent working with the SMSCLOUD organization were a great asset to our company. Even though they are a new firm in the SMS industry, but we have a solid working relationship and the business is expanding every month. </p>
+          </div>
+
+          <div className="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-slate-700">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <img className="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://media.licdn.com/dms/image/D4E03AQHtnGIPYEOdeA/profile-displayphoto-shrink_800_800/0/1700205289234?e=1712188800&v=beta&t=QE1LqnphwmZQFfNk3FMZrk4j-Yjsy1nKbyNDUv5DOhg" alt="Image Description"/>
+              </div>
+
+              <div className="grow ms-3">
+                <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-200">
+                Maryana Nasr
+ </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+    Callync
+     </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        </Slider>
+    </div> 
+    {/* <div className='w-3/4 m-auto'>
+      <div className='mt-20'>
+        {data.map((d)=>(
+          <div className='bg-white h-[450px] text-black rounded-xl'>
+            <div className='rounded-t-xl bg-indigo-500 flex justify-center items-center'>
+
+            <img src={d.img} alt="h-44 w-44 rounded-full"/>
+            </div>
+            <div className='flex flex-col justify-center items-center gap-4 p-4'>
+              <p className='text-xl font-semibold'> {d.name}</p>
+              <p>{d.review}</p>
+            </div>
+          </div>
+           ))}
+      </div> */}
+
+    {/* </div> */}
+    
     <div className="mt-20 grid gap-6 grid-cols-2 sm:gap-12 lg:grid-cols-3 lg:gap-8">
       <div>
         <h4 className="text-lg sm:text-xl font-semibold text-white">Accuracy rate</h4>
-        <p className="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-500">99.95%</p>
-        <p className="mt-1 text-gray-400">in fulfilling orders</p>
+        <p className="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-500">99% </p>
+        <p className="mt-1 text-gray-400">DLR</p>
       </div>
       <div>
-        <h4 className="text-lg sm:text-xl font-semibold text-white">Startup businesses</h4>
-        <p className="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-500">2,000+</p>
-        <p className="mt-1 text-gray-400">partner with Preline</p>
+        <h4 className="text-lg sm:text-xl font-semibold text-white">Customers</h4>
+        <p className="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-500">300+</p>
+        <p className="mt-1 text-gray-400">partner with SMSCloud Hub</p>
       </div>
       <div>
         <h4 className="text-lg sm:text-xl font-semibold text-white">Happy customer</h4>

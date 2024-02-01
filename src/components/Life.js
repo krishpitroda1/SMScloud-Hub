@@ -5,7 +5,7 @@ function Life() {
     <div>
  <div class="w-screen px-4 relative mt-7 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto pb-8">
   <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Life At SMSCloud Hub</h2>
+    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-sky-400">Life At SMSCloud Hub</h2>
     <p class="mt-1 text-gray-600 dark:text-gray-400">Learn How to Celebrate the Most Amazing and Unique Days of the Year with Style and Fun</p>
   </div>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

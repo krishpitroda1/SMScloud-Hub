@@ -37,7 +37,8 @@ function Cpas() {
         <div className='flex'>
           <img src={img3} className="h-8 w-8 rounded-lg" alt="" />
           <h1 className="align-center text-sky-600 font-serif text-xl pr-5">
-          Customizable and specific to your needs</h1>
+          Customizable and specific to your needs
+          </h1>
          </div>
         <div className='flex'>
           <img src={img3} className="h-8 w-8 rounded-lg" alt="" />
@@ -46,10 +47,8 @@ function Cpas() {
            </h1>
         </div>
         </div> 
-                
-    </div>
-
-    </div>
+      </div>
+     </div>
     <img src={img1} className="w-[500px] mx-auto my-4 rounded-2xl" alt="" />
    
   </div>

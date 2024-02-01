@@ -39,9 +39,10 @@ function Contacts() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_ohjjt5j', 'template_z9f9epe', form.current, 'W3evK8uD8UteOGZvp')
+    emailjs.sendForm('service_sf5lyrk', 'template_xlud5qs', form.current, '-5PwbfIUXfNKA7-Sv')
       .then((result) => {
           console.log(result.text);
+          alert("email send successfully ")
       }, (error) => {
           console.log(error.text);
       });
@@ -63,12 +64,12 @@ function Contacts() {
     </div>
 
     <div class="mt-12 grid items-center lg:grid-cols-2 gap-6 lg:gap-16 pb-10">
-      <div class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-8 dark:border-gray-700">
+      <div class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-8 bg-gray-600">
         <h2 class="mb-8 text-xl font-semibold text-sky-600 ">
           Fill in the form
         </h2>
 
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} className='bg-gray-600'>
           <div class="grid gap-4">
              <div class="">
               <div>

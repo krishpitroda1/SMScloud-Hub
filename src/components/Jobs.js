@@ -44,9 +44,9 @@ function Jobs() {
   return (
 
     <div>
-     <div className=' pb-8 mt-10 relative pt-7 flex flex-col gap-5 items-center justify-center text-white  w-screen'>
+     <div className=' pb-8 mt-10 relative pt-7 flex flex-col gap-5 items-center justify-center text-sky-500  w-screen'>
         <h1 className='lg:text-5xl font-bold sm:text-3xl '>Your ideal job awaits, start the search</h1>
-        <p className='text-xl pt-5 pb-5 '>Get latest job openings that best suits you!</p>
+        <p className='text-xl pb-5 text-gray-500 '>Get latest job openings that best suits you!</p>
         {/* <SearchBar fetchJobsCustom={fetchJobsCustom}/> */}
         {jobs.map((job)=>(
           <JobCard key={job.id}{...job}/>

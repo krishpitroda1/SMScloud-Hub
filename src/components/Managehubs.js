@@ -27,7 +27,6 @@ function Managehubs() {
         <div className='flex'>
           <img src={img3} className="h-8 w-8 rounded-lg" alt="" />
           <h1 className="align-center text-sky-600 font-serif text-xl pb-5">
-        
            Messages are raw data that contain the information that triggered the message pipeline, while events are lightweight notifications of a condition or a state change. </h1>
          </div>
       </div>

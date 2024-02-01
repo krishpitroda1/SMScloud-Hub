@@ -1,51 +1,44 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import Analytics from "./Analytics";
-import Newsletter from "./Newsletter";
-import Navbar2 from "./Navbar2";
 import Navbar from "./Navbar";
-import Nav2 from "./Nav2";
-import Cards from "./Cards";
-import End from "./End";
 import { Link } from "react-router-dom";
 import Companies from "./Companies";
 import Test from "./Test";
 import img2 from "../assets/hubs.jpeg";
 // import ParticlesComponent from "./Particle";
-import ParticleBackground from "./ParticlesBackground";
 import img3 from "../assets/easy.jpeg";
-import Nav3 from "./Nav3";
-import Na3 from "./Na3";
+import videobg from '../assets/bgvideo.mp4';
+import Divs from "./Divs";
+import Ev from "./Ev";
 function Home() {
   return (
     <div className="w-screen homediv relative overflow-hidden">
       <Navbar/> 
-       <div className="firstdiv  first max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center text-4xl flex flex-col justify-center text-sky-400  overflow-hidden">
+    <div className="relative">
+
+      <video src={videobg} className="pt-3 blur-sm top-3 mt-2 absolute rounded-lg " autoPlay muted loop ></video>
+       <div className="firstdiv relative pt-14 lg:pt-16 my-auto first max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center text-4xl flex flex-col justify-center text-sky-400  overflow-hidden">
         <h1 className="text-white  font-bold p-3  md:text-7xl sm:text-6xl text-4xl md:py-6" >
-          Delight Your Customers With intelligent Conversation
-        </h1>
+        Smart, Simple & Effective <br/> <span className="text-3xl pt-0 mt-0">Communication on the GO!</span></h1>
         <TypeAnimation
           className="font-bold"
-          sequence={["At Scale", 1000, "Global", 1000, "Securley", 1000]}
+          sequence={["SMS", 1000, "Voice", 1000, "CPaaS", 1000]}
           wrapper="span"
           speed={50}
           style={{ fontSize: "2em", display: "inline-block" }}
           repeat={Infinity}
         />
-        <p className="md:text-2xl text-xl font-bold text-gray-500 py-6">Monitor your data to increase revenue  for BTB</p>
-      {/* <Link to='/Services' className='cursor-pointer'>
-      <button className='bg-sky-600 w-[260px] rounded-full h-[60px] font-medium my-4 mx-auto  py-3 text-black text-md hover:bg-gray-600 hover:text-white'>Get Started</button>
-      </Link>
-    */}
-    {/* <ParticleBackground/> */}
+        <p className="md:text-2xl text-xl font-bold text-white py-6">Monitor your data to increase revenue  for B2B</p>
       </div>
-      <Analytics/>
+      </div>
+      {/* <Analytics/> */}
+      <Divs/>
+      <Ev/>
      <div className="">
-
-      <Companies/>
+        <Companies/>
      </div>
-
-     <h1 className="align-center text-white  text-center p-5 font-serif font-bold text-4xl ">
+     {/* <div>
+     <h1 className="align-center text-sky-400 text-center p-5 font-serif font-bold text-4xl ">
         Why Choose Us
       </h1>
       <div className="grid md:grid-cols-2 ">
@@ -109,6 +102,39 @@ function Home() {
           </div>
         </div>
 
+        </div>
+      </div>
+      </div> */}
+      <div>
+        <h1 className="text-sky-400 text-center p-5 pb-1 font-serif font-bold text-3xl">
+          Benifitis Of SMS Hubbing
+        </h1>
+        <p className="text-center text-gray-500 text-xl">Benifits of SMS Hubbing with SMSCloud Hub</p>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3 p-5">
+            <div className="rounded-lg p-5 h-32 pl-8 bg-gray-800 hover:bg-gray-400  text-white">
+            <h1 className="font-bold text-lg">Scalable Platform</h1>
+            <p>Platform with burstable capacity upto 1000 TPS</p>
+            </div>
+            <div className="rounded-lg h-32 p-5 pl-8 bg-gray-800 hover:bg-gray-400 text-white">
+            <h1 className="font-bold text-lg">High Quality</h1>
+            <p>Global high quality routes with fall back</p>
+            </div>
+            <div className="rounded-lg p-5 h-32 pl-8 bg-gray-800 hover:bg-gray-400 text-white">
+            <h1 className="font-bold text-lg">Seamless Broadcast</h1>
+            <p>Post-paid billing model for the MNOs/MVNOs and Aggregators</p>
+            </div>
+            <div className="rounded-lg p-5 h-32 pl-8 bg-gray-800 hover:bg-gray-400 text-white">
+            <h1 className="font-bold text-lg">Carrier Grade Feature</h1>
+            <p>High availability, 99.95% uptime backed by SLA.</p>
+            </div>
+            <div className="rounded-lg p-5 h-32  pl-8 bg-gray-800 hover:bg-gray-400 text-white">
+            <h1 className="font-bold text-lg">Cloud Based Services</h1>
+            <p>Cloud connectivity with no down time & no CAPEX.</p>
+            </div>
+            <div className="rounded-lg p-5 h-32 pl-8 bg-gray-800 hover:bg-gray-400 text-white">
+            <h1 className="font-bold text-lg">World Wide Reach</h1>
+            <p>Flawless termination in more then 180 Countries.</p>
+            </div> 
         </div>
       </div>
       <div className="p-5">

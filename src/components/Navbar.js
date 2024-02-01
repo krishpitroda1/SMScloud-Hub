@@ -13,9 +13,9 @@ function Navbar() {
   const handlenav = () => {
     setNav(!nav);
   };
-  const [showMenu,setShowMenu]=useState(false);
-  const [showRes,setShowRes]=useState(false);
-  const [showEnterPrise,setShowEnterPrise]=useState(false);
+  const[showMenu,setShowMenu]=useState(false);
+  const[showRes,setShowRes]=useState(false);
+  const[showEnterPrise,setShowEnterPrise]=useState(false);
   const[showOperator,setShowOperator]=useState(false);
   const[showCarrier,setShowCarrier]=useState(false);
   const[showTech,setShowTech]=useState(false);
@@ -27,9 +27,9 @@ function Navbar() {
   });
 
   return (
-    <div className="w-screen top-0 fixed z-50 ">
+    <div className="w-screen top-0 fixed  z-50 ">
       {/* <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer=""></script> */}
-      <div className="navbar w-full px-14 md:px-0 justify-between text-black">
+      <div className="navbar shadow-lg w-full px-14 md:px-0 justify-between text-black">
         <div className="hidden md:flex md:justify-around w-full text-black">
           {/* Your content goes here */}
           <Link className="py-7" to="/About">
@@ -170,15 +170,15 @@ function Navbar() {
               </svg>
               <div className="dropdown hidden absolute hover:block rounded-lg p-8 w-12 text-md bg-[#afd3e2]">
                 <ul>
-                  <li className="hover:text-white border-gray-600 py-2  block border-b">
+                  <li className="hover:text-white py-2  block ">
                     <Link to="/Carrers">Carrers</Link>
                   </li>
-                  <li className="hover:text-white  border-b border-gray-600 py-2 block">
+                  <li className="hover:text-white   py-2 block">
                     <Link to="/Blogs">Blogs</Link>
                   </li>
-                  <li className="hover:text-white">
+                  {/* <li className="hover:text-white">
                     <Link to="/Events">Events</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </p>
@@ -192,18 +192,18 @@ function Navbar() {
 
         <AiOutlineMenu size={"20px"} className=" block md:hidden" />
         </button> */}
-        <div onClick={handlenav} className="block lg:hidden">
+        <div onClick={handlenav} className="block hover:cursor-pointer lg:hidden">
           {!nav ? <></> : <AiOutlineMenu size={20} />}
         </div>
       </div>
 
       {/* -----------------------------------------------------------------mobile view ----------------------------------------------------------------------------- */}
 
-      {/* <div className={!nav ? 'fixed left-0 top-0 w-[50%] border-r h-full border-r-gray-900  ease-in-out duration-500' : "fixed left-[-150%]"}> */}
+      {/* <div className={!nav ? 'fixed left-0 top-0 w-[50%] border-r h-full border-r-gray-900  ease-in-out duration-500' : "fixed left-[-150%]"}>*/}
       <div
         className={
           !nav
-            ?  "fixed left-0 top-0 w-[90%] border-r h-full  overflow-y-scroll border-r-gray-900 bg-white ease-in-out duration-500"
+            ?  "fixed left-0 top-0 w-[90%] border-r h-full  overflow-y-scroll border-r-gray-900 bg-white ease-in-out duration-500 "
             : "fixed left-[-150%]"
         }
       >
@@ -215,7 +215,7 @@ function Navbar() {
               className="lg:cursor-pointer h-14 m-4 w-24"
             />
           </Link>
-          <div onClick={handlenav} className="block lg:hidden ">
+          <div onClick={handlenav} className=" hover:cursor-pointer block lg:hidden ">
             <AiOutlineClose size={20} />
           </div>
         </div>
@@ -231,7 +231,7 @@ function Navbar() {
           <li className="border-b  border-gray-600 py-7">
             <Link
               className="dropdown-link py-7   md:block hover:text-orange-400"
-              to="" onClick={()=>setShowMenu(!showMenu)}
+              to="/Services" onClick={()=>setShowMenu(!showMenu)}
             >
               <p className="flex droptext relative">
                 Services

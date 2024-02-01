@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
+import { useEffect } from "react";
 // import Resources from "./components/Resources";
 import Blogs from "./components/Blogs";
 import A2pblog from "./components/A2pblog";
@@ -21,7 +21,6 @@ import WA from "./components/WA";
 import A2P from "./components/A2P";
 import Esim from "./components/Esim";
 import Technology from "./components/Technology";
-import Navbar2 from "./components/Navbar2";
 import Hlr from "./components/Hlr";
 import Error from "./components/Error";
 import Cpas from "./components/Cpas";
@@ -36,84 +35,17 @@ import Vn from "./components/Vn";
 import Cloudskool from "./components/Cloudskool";
 import Managehubs from "./components/Managehubs";
 import { Route, Routes } from "react-router-dom";
-import Nav3 from "./components/Nav3";
 import Carrier from "./components/Carrier";
 import Events from "./components/Events";
-import Na3 from "./components/Na3";
-import Analytics from "./components/Analytics";
 import Enterprise from "./components/Enterprise";
-// import Particles from "react-tsparticles";
- import { loadFull } from "tsparticles";
-import { useCallback } from "react";
+
  import ParticleBackground from "./components/ParticlesBackground";
 
 
 function App() {
-  // const particlesInit = useCallback(async (engine) => {
-  //   await loadFull(engine);
-
-  // }, []);
-  // const options = {
-  //   particles: {
-  //     number: {
-  //       value: 80,
-  //       density: {
-  //         enable: true,
-  //         area: 800
-  //       }
-  //     },
-  //     color: {
-  //       value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"]
-  //     },
-  //     shape: {
-  //       type: "circle"
-  //     },
-  //     opacity: {
-  //       value: 1
-  //     },
-  //     size: {
-  //       value: { min: 1, max: 8 }
-  //     },
-  //     links: {
-  //       enable: true,
-  //       distance: 150,
-  //       color: "#808080",
-  //       opacity: 0.4,
-  //       width: 1
-  //     },
-  //     move: {
-  //       enable: true,
-  //       speed: 5,
-  //       direction: "none",
-  //       random: false,
-  //       straight: false,
-  //       outModes: "out"
-  //     }
-  //   },
-  //   interactivity: {
-  //     events: {
-  //       onHover: {
-  //         enable: true,
-  //         mode: "grab"
-  //       },
-  //       onClick: {
-  //         enable: true,
-  //         mode: "push"
-  //       }
-  //     },
-  //     modes: {
-  //       grab: {
-  //         distance: 140,
-  //         links: {
-  //           opacity: 1
-  //         }
-  //       },
-  //       push: {
-  //         quantity: 4
-  //       }
-  //     }
-  //   }
-  // };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />

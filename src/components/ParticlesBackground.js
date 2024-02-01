@@ -20,13 +20,13 @@ const ParticleBackground = () => {
               },
             },
             color: {
-              value: "#e06010",
+              value: "#08697c",
             },
             shape: {
               type: "circle",
               stroke: {
                 width: 0,
-                color: "#e06010",
+                color: "#",
               },
               polygon: {
                 nb_sides: 5,
@@ -60,7 +60,7 @@ const ParticleBackground = () => {
             line_linked: {
               enable: true,
               distance: 150,
-              color: "#e06010",
+              color: "#11c2e5",
               opacity: 0.4,
               width: 1,
             },
@@ -80,7 +80,8 @@ const ParticleBackground = () => {
             },
           },
           background:{
-              color:'#87CEEB',
+            color:"#ffff",
+            
               // color:'#008080',
               // color:'#0000'
               // color:"#ff6600",

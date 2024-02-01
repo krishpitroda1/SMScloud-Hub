@@ -4,13 +4,15 @@ import Operator from './Operator'
 import Technology from './Technology'
 import Carrier from './Carrier'
 import End from './End'
+import Analytics from './Analytics'
 function Services() {
   return (
     <div className='relative'>
-      <Enterprise className=''/>
+      <Analytics className='w-screen'/>
+      {/* <Enterprise className=''/>
       <Operator/>
       <Technology/>
-      <Carrier/>
+      <Carrier/> */}
       {/* <End/> */}
     </div>
   )

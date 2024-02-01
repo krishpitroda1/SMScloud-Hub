@@ -12,8 +12,8 @@ function Manageit() {
     <img src={img1} className="w-[500px] mx-auto my-4 rounded-2xl" alt="" />
     <div className="flex flex-col justify-center">
       <p className="text-orange-600 font-bold text-3xl pt-10">
-      Managed Service For IT & Infra    
-      </p>
+      Managed Service For IT & Infra
+     </p>
       <h1 className="py-3 text-lg sm:text-xl md:text-xl pt-5 pl-0 pr-5">
       Managed service for IT and infrastructure is the practice of outsourcing some or all of the tasks related to the planning, implementation, maintenance, and upgrade of the IT systems and networks of an organization to a third-party vendor   </h1>
     <div className="flex pt-8">

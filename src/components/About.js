@@ -1,10 +1,15 @@
-import React from "react";
+import React,{useEffect} from "react";
 import End from "./End";
+
 import img from "../assets/img1.jpeg";
 import img2 from "../assets/hubs.jpeg";
 import img3 from "../assets/easy.jpeg";
 import Faq from "./Faq";
 function About() {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-screen pb-0 relative pt-8 " >
       <div className="pt-8">

@@ -1,6 +1,64 @@
 import React from 'react'
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Ev from './Ev';
 function Events() {
+  // const data=[
+  //   {
+  //     name:'abc',
+  //     img:'https://media.licdn.com/dms/image/D4D03AQFm0iO0GGhXbA/profile-displayphoto-shrink_800_800/0/1689083752439?e=1712188800&v=beta&t=ajLcqon4GmavLbNk-0ZmPcjeh1DeutV1zUYaaqFGv4w',
+  //     review:"SMSCloud Hub provides one of if not the best school platform that we ever saw being provided with 24/7 support in the Mozambican Market allowing our growth in the school software segment"
+  //      },
+  //      {
+  //       name:'abc',
+  //       img:'https://media.licdn.com/dms/image/D4D03AQFm0iO0GGhXbA/profile-displayphoto-shrink_800_800/0/1689083752439?e=1712188800&v=beta&t=ajLcqon4GmavLbNk-0ZmPcjeh1DeutV1zUYaaqFGv4w',
+  //       review:"SMSCloud Hub provides one of if not the best school platform that we ever saw being provided with 24/7 support in the Mozambican Market allowing our growth in the school software segment"
+  //        },
+  //        {
+  //          name:'abc',
+  //         img:'https://media.licdn.com/dms/image/D4D03AQFm0iO0GGhXbA/profile-displayphoto-shrink_800_800/0/1689083752439?e=1712188800&v=beta&t=ajLcqon4GmavLbNk-0ZmPcjeh1DeutV1zUYaaqFGv4w',
+  //         review:"SMSCloud Hub provides one of if not the best school platform that we ever saw being provided with 24/7 support in the Mozambican Market allowing our growth in the school software segment"
+  //          }
+  // ]
+  const settings = {
+    
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div>
        <div class="w-screen relative px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto pb-8">
@@ -8,6 +66,25 @@ function Events() {
     <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-black">Events</h2>
     <p class="mt-1 text-gray-600 dark:text-gray-400">Learn How to Celebrate the Most Amazing and Unique Days of the Year with Style and Fun</p>
   </div>
+    {/* <div className='w-3/4 m-auto bg-black'>
+      <div className='mt-20 bg-black'>
+    <Slider {...settings}> 
+        {data.map((d)=>(
+          <div key={d.name} className='bg-white h-[450px] text-black rounded-xl'>
+            <div className='rounded-t-xl bg-indigo-500 flex justify-center items-center'>
+
+            <img src={d.img} alt="h-44 w-44 rounded-full"/>
+            </div>
+            <div className='flex flex-col justify-center items-center gap-4 p-4'>
+              <p className='text-xl font-semibold'> {d.name}</p>
+              <p>{d.review}</p>
+            </div>
+          </div>
+           ))}
+     </Slider>
+      </div> 
+
+     </div>  */}
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <a class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
       <div class="aspect-w-16 aspect-h-11">
@@ -93,14 +170,9 @@ function Events() {
     
     </a>
   </div>
-  {/* <div class="mt-12 text-center">
-    <a class="py-3 px-4 inline-flex items-center gap-x-1 text-sm font-medium rounded-full border border-gray-200 bg-white text-blue-600 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-blue-500 dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-      Read more
-      <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-    </a>
-  </div> */}
-</div>
-    </div>
+  </div>
+  <Ev/>
+   </div>
   )
 }
 
